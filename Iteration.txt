@@ -1,0 +1,34 @@
+images = [
+    "Pictures/basement.jpg",
+    "Pictures/restaurant.jpg",
+    "Pictures/school.jpg",
+    "Pictures/garden.jpg",
+    "Pictures/car.jpg",
+    "Pictures/gym.jpg",
+    "Pictures/bathroom.jpg",
+    "Pictures/livingroom.jpg",
+    "Pictures/kitchen.jpg",
+    "Pictures/bedroom.jpg",
+    "Pictures/home.jpg"
+]
+
+def easy():
+    global mode, points, words, answers, num
+    mode = 1
+    res()
+
+def img():
+    global num, images
+    
+    frame = Frame(root, width = 300, height = 300)
+    frame.pack()
+    frame.place(anchor='center', relx=0.5, rely=0.5)
+    img = ImageTk.PhotoImage(Image.open(images[num]))
+    label = Label(frame, image = img)
+    label.pack()
+    g(0, END)
+
+def med():
+    global mode, points, words, answers, num
+    mode = 0
+    res()
